@@ -17,7 +17,7 @@ class App extends Component {
     this.setState({
       userOutput : [
         {name: event.target.value},
-        {name: "teste"}
+        {name: "Morty"}
       ]
     })
   }
@@ -27,6 +27,14 @@ class App extends Component {
       <div className="App">
         <h1> Exercise 1 - React: The Complete Guide</h1>
         <UserInput changed={this.swichtStateHandler.bind(this)}/>
+        <UserOutput 
+        name1={this.state.userOutput[0].name} 
+        name2={this.state.userOutput[1].name}
+        />
+        <UserOutput 
+        name1={this.state.userOutput[0].name} 
+        name2={this.state.userOutput[1].name}
+        />
         <UserOutput 
         name1={this.state.userOutput[0].name} 
         name2={this.state.userOutput[1].name}

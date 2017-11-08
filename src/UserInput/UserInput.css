@@ -1,3 +1,26 @@
 .UserInput {
+ width: 100%;
+ background-color: rgba(244, 238, 238, 0.974);
+ height: 70px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
 
+.Input {
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:300px;
+    border:none;
+    border-bottom:1px solid #757575;
+}
+
+input:focus { 
+    outline:none; 
+}
+
+.Input::-webkit-input-placeholder{
+    font-size: 99%;
+    color: rgb(203, 205, 203);
 }
