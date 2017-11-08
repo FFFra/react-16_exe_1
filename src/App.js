@@ -10,8 +10,8 @@ class App extends Component {
       {name: "Rick"},
       {name: "Morty"}
     ]
-  }  
-  
+  }
+
   swichtStateHandler = (event) => {
     console.log('Typing...', event);
     this.setState({
@@ -21,27 +21,26 @@ class App extends Component {
       ]
     })
   }
-    
+
   render() {
+		const output = (
+			<UserOutput
+				name1={this.state.userOutput[0].name}
+				name2={this.state.userOutput[1].name}
+			/>
+		)
     return (
       <div className="App">
         <h1> Exercise 1 - React: The Complete Guide</h1>
-        <UserInput 
+        <UserInput
         changed={this.swichtStateHandler}
         currentName={this.state.userOutput[0].name}
         />
-        <UserOutput 
-        name1={this.state.userOutput[0].name} 
-        name2={this.state.userOutput[1].name}
-        />
-        <UserOutput 
-        name1={this.state.userOutput[0].name} 
-        name2={this.state.userOutput[1].name}
-        />
-        <UserOutput 
-        name1={this.state.userOutput[0].name} 
-        name2={this.state.userOutput[1].name}
-        />
+				<div className="outputs">
+					{output}
+					{output}
+					{output}
+				</div>
       </div>
     );
   }
