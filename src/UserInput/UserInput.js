@@ -9,7 +9,7 @@ const UserInput = (props) => {
             type="text" 
             placeholder="Type your new name here"
             onChange={props.changed} 
-            value={props.name}/>
+            value={props.currentName}/>
         </div>
     );
 }

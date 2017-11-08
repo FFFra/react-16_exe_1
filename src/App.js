@@ -26,7 +26,10 @@ class App extends Component {
     return (
       <div className="App">
         <h1> Exercise 1 - React: The Complete Guide</h1>
-        <UserInput changed={this.swichtStateHandler.bind(this)}/>
+        <UserInput 
+        changed={this.swichtStateHandler}
+        currentName={this.state.userOutput[0].name}
+        />
         <UserOutput 
         name1={this.state.userOutput[0].name} 
         name2={this.state.userOutput[1].name}
